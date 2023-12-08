@@ -5,11 +5,12 @@ const ItemCount = ( {cantidad, handleRestar, handleSumar, handleAdd} ) => {
     <div>
 
         <div className="item-count">
-            <button onClick={handleRestar}>-</button>
+            <button className="hover:brightness-110 hover:animate-pulse font-bold py-3 px-6 rounded-full bg-indigo-500 shadow-lg shadow-indigo-500/50 text-white" onClick={handleRestar}>-</button>
             <p>{cantidad}</p>
-            <button onClick={handleSumar}>+</button>
+            <button className="hover:brightness-110 hover:animate-pulse font-bold py-3 px-6 rounded-full bg-indigo-500 shadow-lg shadow-indigo-500/50 text-white" onClick={handleSumar}>+</button>
         </div>
-        <button className="agregar-al-carrito" onClick={handleAdd}>Agregar al carrito</button>
+        <br/>
+        <button className="hover:brightness-110 hover:animate-pulse font-bold py-3 px-6 rounded-full bg-indigo-500 shadow-lg shadow-indigo-500/50 text-white" onClick={handleAdd}>Agregar al carrito</button>
     </div>
   )
 }
