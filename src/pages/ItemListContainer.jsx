@@ -8,7 +8,7 @@ const ItemListContainer = () => {
 
     const [products, setProducts] = useState([]);
 
-    const [name, setName] = useState("Products");
+    const [name, setName] = useState();
 
     const category = useParams().category;
 

@@ -24,8 +24,8 @@ code {
 }
 
 :root {
-  --clr-main: #c56cee;
-  --clr-main-light: #efdaf9;
+  --clr-main: #4a67c5;
+  --clr-main-light: #ced5fa;
 }
 
 .container {
@@ -71,7 +71,7 @@ code {
 
 .productos {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   padding-block: 2rem;
 }
@@ -79,7 +79,7 @@ code {
 .producto {
   display: flex;
   flex-direction: column;
-  border-radius: 1rem;
+  border-radius: 2rem;
   overflow: hidden;
 }
 
@@ -93,7 +93,7 @@ code {
 
 .producto > img {
   width: 100%;
-  aspect-ratio: 2/1;
+  aspect-ratio: 1/1;
   object-fit: cover;
 }
 

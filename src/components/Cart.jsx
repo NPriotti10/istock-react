@@ -12,17 +12,18 @@ const Cart = () => {
     
 
   return (
-    <div className="container">
-        <h1 className="main-title">Carrito</h1>
+    <div className="container mx-auto mt-8">
+        <br />
+        <h1 className='text-3xl'>Tu Carrito: </h1>
 
         {
             cart.map((prod) => (
                 <div key={prod.id}>
                     <br />
-                    <h3>Producto: {prod.name}</h3>
-                    <p>Precio unit: ${prod.price}</p>
-                    <p>Precio total: ${prod.price * prod.cantidad}</p>
-                    <p>Cant: {prod.cantidad}</p>
+                    <h3 className='text-3xl' >Producto: {prod.name}</h3>
+                    <p className='text-xl'>Precio unit: ${prod.price}</p>
+                    <p className='text-xl'>Precio total: ${prod.price * prod.cantidad}</p>
+                    <p className='text-xl'> Cantidad: {prod.cantidad}</p>
                     <br />
                 </div>
             ))
@@ -31,11 +32,18 @@ const Cart = () => {
         {  
             cart.length > 0 ?
             <>
-                <h2>Precio total: ${totalPrice()}</h2>
-                <button className="inline-flex items-center px-4 py-2 bg-red-600 transition ease-in-out delay-75 hover:bg-red-700 text-white text-sm font-medium rounded-md hover:-translate-y-1 hover:scale-110"  onClick={handleVaciar} > Vaciar</button>
-                <Link to="/checkout">Finalizar compra</Link>
+                <h2 className='text-5xl' >Precio total: ${totalPrice()}</h2>
+                <br />
+                <button className="hover:brightness-110 hover:animate-pulse font-bold py-2 px-6 rounded-full bg-red-500 shadow-lg shadow-indigo-500/50 text-white"  onClick={handleVaciar} > Vaciar</button>
+                <Link className="hover:brightness-110 hover:animate-pulse font-bold py-3 px-6 rounded-full bg-indigo-500 shadow-lg shadow-indigo-500/50 text-white" to="/checkout">Finalizar compra</Link>
             </> :
-            <h2>El carrito está vacío :(</h2>
+            <>
+            <br />
+                <h2 className='text-xl'>El carrito está vacío</h2>
+                <br />
+                <Link className="hover:brightness-110 hover:animate-pulse font-bold py-3 px-6 rounded-full bg-indigo-500 shadow-lg shadow-indigo-500/50 text-white" to="/">Volver al catalogo</Link>
+            </>
+            
         }
         
     </div>
